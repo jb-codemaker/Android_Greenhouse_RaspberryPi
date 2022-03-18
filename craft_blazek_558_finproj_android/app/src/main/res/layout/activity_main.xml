@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/celciusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/celsius"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/humidityTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/humidity"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lumTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celciusTextView" />
+
+    <TextView
+        android:id="@+id/lumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/lums"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/soilTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+
+    <TextView
+        android:id="@+id/soilTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/soil"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/waterLevTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lumTextView" />
+
+    <TextView
+        android:id="@+id/waterLevTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/waterLev"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/fanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soilTextView" />
+
+    <TextView
+        android:id="@+id/fanTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/fan"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pumpTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterLevTextView" />
+
+    <TextView
+        android:id="@+id/pumpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/pump"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lights_matTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fanTextView" />
+
+    <TextView
+        android:id="@+id/lights_matTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/lights_mat"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/intervalTextview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pumpTextView" />
+
+    <Button
+        android:id="@+id/fanoff_btn"
+        android:layout_width="75dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteoff_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/fanon_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fanon_btn"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/fanon_btn"
+        android:layout_width="75dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteon_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/fanTextView"
+        app:layout_constraintEnd_toStartOf="@+id/liteoff_btn"
+        app:layout_constraintTop_toTopOf="@+id/fanTextView"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/pumpon_btn"
+        android:layout_width="75dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteon_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/pumpTextView"
+        app:layout_constraintEnd_toStartOf="@+id/liteoff_btn"
+        app:layout_constraintTop_toTopOf="@+id/pumpTextView" />
+
+    <Button
+        android:id="@+id/pumpoff_btn"
+        android:layout_width="75dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteoff_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/pumpon_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pumpon_btn" />
+
+    <Button
+        android:id="@+id/liteoff_btn"
+        android:layout_width="75dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteoff_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/liteon_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/liteon_btn" />
+
+    <Button
+        android:id="@+id/liteon_btn"
+        android:layout_width="75dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/liteon_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/lights_matTextView"
+        app:layout_constraintEnd_toStartOf="@+id/liteoff_btn"
+        app:layout_constraintTop_toTopOf="@+id/lights_matTextView" />
+
+    <Button
+        android:id="@+id/btnPick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sch_lights"
+        app:layout_constraintEnd_toStartOf="@+id/schTextView"
+        app:layout_constraintTop_toTopOf="@+id/schTextView" />
+
+    <TextView
+        android:id="@+id/schTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPick"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liteoff_btn" />
+
+    <TextView
+        android:id="@+id/intervalTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set delay for sensor update (in secs)"
+        app:layout_constraintBottom_toTopOf="@+id/interval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPick" />
+
+    <SeekBar
+        android:id="@+id/interval"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:min="0"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/connect_btn"
+        app:layout_constraintTop_toBottomOf="@+id/intervalTextview"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <Button
+        android:id="@+id/connect_btn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_btn_label"
+        app:layout_constraintBottom_toBottomOf="@+id/disconnect_btn"
+        app:layout_constraintEnd_toStartOf="@+id/disconnect_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/disconnect_btn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/disconnect_btn_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/connect_btn" />
+
+    <ProgressBar
+        android:id="@+id/tempBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="170dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminateTint="@color/Magenta"
+        android:max="40"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="@+id/celciusTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/celciusTextView" />
+
+    <ProgressBar
+        android:id="@+id/humiBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="170dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminateTint="@color/turquoise"
+        android:max="100"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="@+id/humidityTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/humidityTextView" />
+
+    <ProgressBar
+        android:id="@+id/lumsBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="170dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminateTint="@color/goldenrod"
+        android:max="255"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="@+id/lumTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lumTextView" />
+
+    <ProgressBar
+        android:id="@+id/soilBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="170dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminateTint="@color/brown"
+        android:max="255"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="@+id/soilTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/soilTextView" />
+
+    <ProgressBar
+        android:id="@+id/watBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="170dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:indeterminateTint="@color/violet"
+        android:max="5"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="@+id/waterLevTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/waterLevTextView"
+        tools:progress="60" />
+
+    <ImageView
+        android:id="@+id/imgPicker"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnFragment"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="36dp"
+        android:text="Authors"
+        app:layout_constraintBottom_toTopOf="@+id/connect_btn"
+        app:layout_constraintStart_toStartOf="@+id/lights_matTextView" />
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
